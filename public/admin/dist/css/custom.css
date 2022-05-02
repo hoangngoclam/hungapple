@@ -1,0 +1,24 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.sidebar-item-text {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.media-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.media-wrapper {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    width: 200px;
+}
+
+.media-container {
+    margin-bottom: 30px;
+}

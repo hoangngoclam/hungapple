@@ -1,0 +1,42 @@
+.widget_categories > li a.active{
+    color: #eb3e32;
+}
+
+.cart-empty {
+    text-align: center;
+}
+
+.cart-empty div{
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.cart-empty i{
+    font-size: 30px;   
+}
+
+.cart-empty.cart-empty-list {
+    color: white;
+    padding-top: 30px;
+}
+
+.preloader.ajax-loader {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+i {
+    pointer-events: none;
+}
+
+.shop-empty {
+    text-align: center;
+    padding: 100px 0;
+}
+
+.shop-empty i{
+    font-size: 60px;
+}
+
+.shop-empty div{
+    margin-top: 30px;
+}
