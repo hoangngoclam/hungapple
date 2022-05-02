@@ -1458,22 +1458,26 @@ jQuery.support = (function() {
 		// NOTE: To any future maintainer, we've window.getComputedStyle
 		// because jsdom on node.js will break without it.
 		if ( window.getComputedStyle ) {
-			support.pixelPosition = ( window.getComputedStyle( div, null ) || {} ).top !== "1%";
-			support.boxSizingReliable = ( window.getComputedStyle( div, null ) || { width: "4px" } ).width === "4px";
+            support.pixelPosition =
+                (window.getComputedStyle(div, null) || {}).top !== "1%";
+            support.boxSizingReliable =
+                (window.getComputedStyle(div, null) || { width: "4px" })
+                    .width === "4px";
 
-			// Check if div with explicit width and no margin-right incorrectly
-			// gets computed margin-right based on width of container. For more
-			// info see bug #3333
-			// Fails in WebKit before Feb 2011 nightlies
-			// WebKit Bug 13343 - getComputedStyle returns wrong value for margin-right
-			marginDiv = document.createElement("div");
-			marginDiv.style.cssText = div.style.cssText = divReset;
-			marginDiv.style.marginRight = marginDiv.style.width = "0";
-			div.style.width = "1px";
-			div.appendChild( marginDiv );
-			support.reliableMarginRight =
-				!parseFloat( ( window.getComputedStyle( marginDiv, null ) || {} ).marginRight );
-		}
+            // Check if div with explicit width and no margin-right incorrectly
+            // gets computed margin-right based on width of container. For more
+            // info see bug #3333333
+            // Fails in WebKit before Feb 2011 nightlies
+            // WebKit Bug 13343 - getComputedStyle returns wrong value for margin-right
+            marginDiv = document.createElement("div");
+            marginDiv.style.cssText = div.style.cssText = divReset;
+            marginDiv.style.marginRight = marginDiv.style.width = "0";
+            div.style.width = "1px";
+            div.appendChild(marginDiv);
+            support.reliableMarginRight = !parseFloat(
+                (window.getComputedStyle(marginDiv, null) || {}).marginRight
+            );
+        }
 
 		if ( typeof div.style.zoom !== "undefined" ) {
 			// Check if natively block-level elements act like inline-block

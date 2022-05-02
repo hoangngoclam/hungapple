@@ -19,9 +19,37 @@ var c=z(a.selectNode.Synonyms);a.selectNode.Synonyms.clear();for(var d=0;d<b.len
 "position: absolute;top:30px;bottom:41px;left:1px;right:1px;z-index: 10020;padding:0;margin:0;background:"+a+";opacity: "+g+";filter: alpha(opacity\x3d"+100*g+");display: none;";h.id=e;f||d.appendChild(h);return{setDisable:function(){h.style.display="none"},setEnable:function(){h.style.display="block"}}},L=function(b,c,d){var e=new CKEDITOR.dom.element("div"),g=new CKEDITOR.dom.element("input"),f=new CKEDITOR.dom.element("label"),h="wscGrammerSuggest"+b+"_"+c;e.addClass("cke_dialog_ui_input_radio");
 e.setAttribute("role","presentation");e.setStyles({width:"97%",padding:"5px","white-space":"normal"});g.setAttributes({type:"radio",value:c,name:"wscGrammerSuggest",id:h});g.setStyles({"float":"left"});g.on("click",function(b){a.textNode.GrammTab.setValue(b.sender.getValue())});d?g.setAttribute("checked",!0):!1;g.addClass("cke_dialog_ui_radio_input");f.appendText(b);f.setAttribute("for",h);f.setStyles({display:"block","line-height":"16px","margin-left":"18px","white-space":"normal"});e.append(g);
 e.append(f);return e},F=function(a){a=a||"true";null!==a&&"false"==a&&u()},w=function(b){var c=new I(b);b="wscLang"+a.dialog.getParentEditor().name;b=document.getElementById(b);var d,e=a.iframeNumber+"_"+a.dialog._.currentTabId;a.buildOptionLang(c.setLangList,a.dialog.getParentEditor().name);if(d=c.getCurrentLangGroup(a.selectingLang))v[d].onShow();F(a.show_grammar);b.onchange=function(b){b=c.getCurrentLangGroup(this.value);var d=a.dialog._.currentTabId;v[b].onShow();F(a.show_grammar);a.div_overlay.setEnable();
-a.selectingLang=this.value;d=a.cmd[d];b&&v[b]&&v[b].allowedTabCommands[d]||(d=v[b].defaultTabCommand);for(var h in a.cmd)if(a.cmd[h]==d){a.previousTab=h;break}f.postMessage.send({message:{changeLang:a.selectingLang,interfaceLang:a.interfaceLang,text:a.dataTemp,cmd:d},target:a.targetFromFrame[e],id:"selectionLang_outer__page"})}},M=function(b){var c,d=function(b){b=a.dialog.getContentElement(a.dialog._.currentTabId,b)||a.LocalizationButton[b].instance;b.getElement().hasClass("cke_disabled")?b.getElement().setStyle("color",
-"#a0a0a0"):b.disable()};c=function(b){b=a.dialog.getContentElement(a.dialog._.currentTabId,b)||a.LocalizationButton[b].instance;b.enable();b.getElement().setStyle("color","#333")};"no_any_suggestions"==b?(b="No suggestions",c=a.dialog.getContentElement(a.dialog._.currentTabId,"ChangeTo_button")||a.LocalizationButton.ChangeTo_button.instance,c.disable(),c=a.dialog.getContentElement(a.dialog._.currentTabId,"ChangeAll")||a.LocalizationButton.ChangeAll.instance,c.disable(),d("ChangeTo_button"),d("ChangeAll")):
-(c("ChangeTo_button"),c("ChangeAll"));return b},O={iframeOnload:function(b){b=a.dialog._.currentTabId;E(a.targetFromFrame[a.iframeNumber+"_"+b],a.cmd[b])},suggestlist:function(b){delete b.id;a.div_overlay_no_check.setDisable();C();w(a.langList);var c=M(b.word),d="";c instanceof Array&&(c=b.word[0]);d=c=c.split(",");a.textNode.SpellTab.setValue(d[0]);b=z(A);A.clear();for(c=0;c<d.length;c++){var e=document.createElement("option");e.text=d[c];e.value=d[c];b.$.add(e,c)}p();a.div_overlay.setDisable()},
+a.selectingLang=this.value;d=a.cmd[d];b&&v[b]&&v[b].allowedTabCommands[d]||(d=v[b].defaultTabCommand);for(var h in a.cmd)if(a.cmd[h]==d){a.previousTab=h;break}f.postMessage.send({message:{changeLang:a.selectingLang,interfaceLang:a.interfaceLang,text:a.dataTemp,cmd:d},target:a.targetFromFrame[e],id:"selectionLang_outer__page"})}},M=function(b){var c,
+    d = function (b) {
+        b =
+            a.dialog.getContentElement(a.dialog._.currentTabId, b) ||
+            a.LocalizationButton[b].instance;
+        b.getElement().hasClass("cke_disabled")
+            ? b.getElement().setStyle("color", "#a0a0a0")
+            : b.disable();
+    };
+c = function (b) {
+    b =
+        a.dialog.getContentElement(a.dialog._.currentTabId, b) ||
+        a.LocalizationButton[b].instance;
+    b.enable();
+    b.getElement().setStyle("color", "#333333");
+};
+"no_any_suggestions" == b
+    ? ((b = "No suggestions"),
+      (c =
+          a.dialog.getContentElement(
+              a.dialog._.currentTabId,
+              "ChangeTo_button"
+          ) || a.LocalizationButton.ChangeTo_button.instance),
+      c.disable(),
+      (c =
+          a.dialog.getContentElement(a.dialog._.currentTabId, "ChangeAll") ||
+          a.LocalizationButton.ChangeAll.instance),
+      c.disable(),
+      d("ChangeTo_button"),
+      d("ChangeAll"))
+    : (c("ChangeTo_button"), c("ChangeAll"));return b},O={iframeOnload:function(b){b=a.dialog._.currentTabId;E(a.targetFromFrame[a.iframeNumber+"_"+b],a.cmd[b])},suggestlist:function(b){delete b.id;a.div_overlay_no_check.setDisable();C();w(a.langList);var c=M(b.word),d="";c instanceof Array&&(c=b.word[0]);d=c=c.split(",");a.textNode.SpellTab.setValue(d[0]);b=z(A);A.clear();for(c=0;c<d.length;c++){var e=document.createElement("option");e.text=d[c];e.value=d[c];b.$.add(e,c)}p();a.div_overlay.setDisable()},
 grammerSuggest:function(b){delete b.id;delete b.mocklangs;C();w(a.langList);var c=b.grammSuggest[0];a.grammerSuggest.getElement().setHtml("");a.textNode.GrammTab.reset();a.textNode.GrammTab.setValue(c);a.textNodeInfo.GrammTab.getElement().setHtml("");a.textNodeInfo.GrammTab.getElement().setText(b.info);b=b.grammSuggest;for(var c=b.length,d=!0,e=0;e<c;e++)a.grammerSuggest.getElement().append(L(b[e],b[e],d)),d=!1;p();a.div_overlay.setDisable()},thesaurusSuggest:function(b){delete b.id;delete b.mocklangs;
 C();w(a.langList);a.selectNodeResponce=b;a.textNode.Thesaurus.reset();var c=z(a.selectNode.Categories),d=0;a.selectNode.Categories.clear();for(var e in b)b=document.createElement("option"),b.text=e,b.value=e,c.$.add(b,d),d++;c=a.selectNode.Categories.getInputElement().getChildren().$[0].value;a.selectNode.Categories.getInputElement().getChildren().$[0].selected=!0;a.buildOptionSynonyms(c);p();a.div_overlay.setDisable()},finish:function(b){delete b.id;N();b=a.dialog.getContentElement(a.dialog._.currentTabId,
 "BlockFinishChecking").getElement();b.removeStyle("display");b.removeStyle("position");b.removeStyle("left");b.show();a.div_overlay.setDisable()},settext:function(b){delete b.id;a.dialog.getParentEditor().getCommand("checkspell");var c=a.dialog.getParentEditor();if(c.scayt&&c.wsc.isSsrvSame){var d=c.wsc.udn;d?c.wsc.DataStorage.setData("scayt_user_dictionary_name",d):c.wsc.DataStorage.setData("scayt_user_dictionary_name","")}try{c.focus()}catch(e){}c.setData(b.text,function(){a.dataTemp="";c.unlockSelection();

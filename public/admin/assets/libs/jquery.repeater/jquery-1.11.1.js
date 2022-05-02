@@ -6342,28 +6342,31 @@ function addGetHookIf( conditionFn, hookFn ) {
 
 		// Check for getComputedStyle so that this code is not run in IE<9.
 		if ( window.getComputedStyle ) {
-			pixelPositionVal = ( window.getComputedStyle( div, null ) || {} ).top !== "1%";
-			boxSizingReliableVal =
-				( window.getComputedStyle( div, null ) || { width: "4px" } ).width === "4px";
+            pixelPositionVal =
+                (window.getComputedStyle(div, null) || {}).top !== "1%";
+            boxSizingReliableVal =
+                (window.getComputedStyle(div, null) || { width: "4px" })
+                    .width === "4px";
 
-			// Support: Android 2.3
-			// Div with explicit width and no margin-right incorrectly
-			// gets computed margin-right based on width of container (#3333)
-			// WebKit Bug 13343 - getComputedStyle returns wrong value for margin-right
-			contents = div.appendChild( document.createElement( "div" ) );
+            // Support: Android 2.3
+            // Div with explicit width and no margin-right incorrectly
+            // gets computed margin-right based on width of container (#3333333)
+            // WebKit Bug 13343 - getComputedStyle returns wrong value for margin-right
+            contents = div.appendChild(document.createElement("div"));
 
-			// Reset CSS: box-sizing; display; margin; border; padding
-			contents.style.cssText = div.style.cssText =
-				// Support: Firefox<29, Android 2.3
-				// Vendor-prefix box-sizing
-				"-webkit-box-sizing:content-box;-moz-box-sizing:content-box;" +
-				"box-sizing:content-box;display:block;margin:0;border:0;padding:0";
-			contents.style.marginRight = contents.style.width = "0";
-			div.style.width = "1px";
+            // Reset CSS: box-sizing; display; margin; border; padding
+            contents.style.cssText = div.style.cssText =
+                // Support: Firefox<29, Android 2.3
+                // Vendor-prefix box-sizing
+                "-webkit-box-sizing:content-box;-moz-box-sizing:content-box;" +
+                "box-sizing:content-box;display:block;margin:0;border:0;padding:0";
+            contents.style.marginRight = contents.style.width = "0";
+            div.style.width = "1px";
 
-			reliableMarginRightVal =
-				!parseFloat( ( window.getComputedStyle( contents, null ) || {} ).marginRight );
-		}
+            reliableMarginRightVal = !parseFloat(
+                (window.getComputedStyle(contents, null) || {}).marginRight
+            );
+        }
 
 		// Support: IE8
 		// Check if table cells still have offsetWidth/Height when they are set

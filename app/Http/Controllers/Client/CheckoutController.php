@@ -92,7 +92,7 @@ class CheckoutController extends BaseController
                     $dataSendEmail = $order->toArray();
                     $this->emailService->sendEmail(
                             env('MAIL_RECEIVE'),
-                            date("d/m/Y H:i:s") . ' | hungapple.com | Đơn Hàng Mới',
+                        date("d/m/Y H:i:s") . ' | tstore.com.vn | Đơn Hàng Mới',
                             "client.email.email-order",
                             $dataSendEmail
                     );

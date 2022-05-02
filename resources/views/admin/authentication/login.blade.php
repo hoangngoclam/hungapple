@@ -44,7 +44,7 @@
             <div class="auth-box">
                 <div>
                     <div class="logo">
-                        <span class="db"> <img src="{{url('/assets/images/logo/logo_icon_dark.png')}}" alt="login"/></span>
+                        <span class="db"> <img src="{{url('/assets/images/logo/logo-chuan.png')}}" alt="login" /></span>
                     </div>
                     <!-- Form -->
                     <div class="row">
@@ -70,7 +70,7 @@
                                 </div>
                                 <div class="form-group text-center">
                                     <div class="col-xs-12 p-b-20">
-                                        <button class="btn btn-block btn-lg btn-info" type="submit" style="background-color: #eb3e32 !important; border-color: #eb3e32;">Đăng nhập</button>
+                                        <button class="btn btn-block btn-lg btn-info" type="submit" style="background-color: #ffd400 !important; border-color: #ffd400;">Đăng nhập</button>
                                     </div>
                                 </div>
                             </form>
@@ -106,8 +106,8 @@
     <!-- This page plugin js -->
     <!-- ============================================================== -->
     <script>
-    $('[data-toggle="tooltip"]').tooltip();
-    $(".preloader").fadeOut();
+        $('[data-toggle="tooltip"]').tooltip();
+        $(".preloader").fadeOut();
     </script>
 </body>
 

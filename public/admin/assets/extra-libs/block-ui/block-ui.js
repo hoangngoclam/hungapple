@@ -62,19 +62,19 @@ $(function() {
             fadeIn: 1000,
             timeout: 2000, //unblock after 2 seconds
             overlayCSS: {
-                backgroundColor: '#000',
+                backgroundColor: "#000",
                 opacity: 0.5,
-                cursor: 'wait'
+                cursor: "wait",
             },
             css: {
                 border: 0,
                 padding: 0,
-                color: '#333',
-                backgroundColor: 'transparent'
+                color: "#333333",
+                backgroundColor: "transparent",
             },
-            onBlock: function() {
-                alert('Page blocked!');
-            }
+            onBlock: function () {
+                alert("Page blocked!");
+            },
         });
     });
 
@@ -85,19 +85,19 @@ $(function() {
             message: '<i class="fas fa-spin fa-sync text-white"></i>',
             timeout: 2000, //unblock after 2 seconds
             overlayCSS: {
-                backgroundColor: '#000',
+                backgroundColor: "#000",
                 opacity: 0.5,
-                cursor: 'wait'
+                cursor: "wait",
             },
             css: {
                 border: 0,
                 padding: 0,
-                color: '#333',
-                backgroundColor: 'transparent'
+                color: "#333333",
+                backgroundColor: "transparent",
             },
-            onUnblock: function() {
-                alert('Page unblocked!');
-            }
+            onUnblock: function () {
+                alert("Page unblocked!");
+            },
         });
     });
 
@@ -107,17 +107,17 @@ $(function() {
         $.blockUI({
             message: '<i class="fas fa-spin fa-sync text-white"></i>',
             overlayCSS: {
-                backgroundColor: '#000',
+                backgroundColor: "#000",
                 opacity: 0.5,
-                cursor: 'wait'
+                cursor: "wait",
             },
             css: {
-                color: '#333',
+                color: "#333333",
                 border: 0,
                 padding: 0,
-                backgroundColor: 'transparent'
+                backgroundColor: "transparent",
             },
-            onOverlayClick: $.unblockUI
+            onOverlayClick: $.unblockUI,
         });
     });
 

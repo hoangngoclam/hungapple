@@ -329,11 +329,11 @@
 .sticky_dd_dark_skin.header_wrap.nav-fixed .navbar-nav .dropdown-header,
 .dd_dark_skin .cart_list a,.dd_dark_skin .cart_quantity, .dd_dark_skin .cart_total,
 .sticky_dd_dark_skin.header_wrap.nav-fixed .cart_list a,.sticky_dd_dark_skin.header_wrap.nav-fixed .cart_quantity, .sticky_dd_dark_skin.header_wrap.nav-fixed .cart_total {
-	color: #333;
+	color: #333333;
 }
 .dd_dark_skin .item_remove,
 .sticky_dd_dark_skin.header_wrap.nav-fixed .item_remove {
-	color: #333 !important;
+	color: #333333 !important;
 }
 .dd_dark_skin .navbar-nav .dropdown-menu,
 .dd_dark_skin .navbar-nav .dropdown-menu .dropdown-menu,

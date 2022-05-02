@@ -14,3 +14,4 @@ yarn-error.log
 /public/.env
 /public/.env.example
 /public/composer.lock
+.DS_store

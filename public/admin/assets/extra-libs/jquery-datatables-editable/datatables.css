@@ -203,7 +203,8 @@ ul.DTTT_dropdown.dropdown-menu {
 }
 
 ul.DTTT_dropdown.dropdown-menu a {
-	color: #333 !important; /* needed only when demo_page.css is included */
+	color: #333333 !important;
+	/* needed only when demo_page.css is included */
 }
 
 ul.DTTT_dropdown.dropdown-menu li {
@@ -229,7 +230,7 @@ div.DTTT_print_info {
 	margin-left: -200px;
 	margin-top: -75px;
 	text-align: center;
-	color: #333;
+	color: #333333;
 	padding: 10px 30px;
 	opacity: 0.95;
 

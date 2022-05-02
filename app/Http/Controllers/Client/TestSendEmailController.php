@@ -25,7 +25,7 @@ class TestSendEmailController extends BaseController
         ];
         $details = [
             "to_mail" => "lammt1998@gmail.com",
-            "subject" => date("d/m/Y H:i:s") . ' | hungapple.com | Đơn Hàng Mới',
+            "subject" => date("d/m/Y H:i:s") . ' | tstore.com.vn | Đơn Hàng Mới',
             "template" => 'client.email.email-order',
             "data" => $data
         ];

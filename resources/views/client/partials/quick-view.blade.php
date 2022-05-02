@@ -6,15 +6,13 @@ $arrSubImage = $product->getMedia('images');
         <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
             <div class="product-image">
                 <div class="product_img_box">
-                    <img id="product_img" src='{{ $product->getFirstMediaUrl('images') }}' data-zoom-image="{{ $product->getFirstMediaUrl('images') }}" alt="{{$product->name}}" 
-                    onerror="this.onerror=null;this.src='{{ asset('assets/images/image-not-available.jpg') }}';"/>
+                    <img id="product_img" src='{{ $product->getFirstMediaUrl('images') }}' data-zoom-image="{{ $product->getFirstMediaUrl('images') }}" alt="{{$product->name}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/image-not-available.jpg') }}';" />
                 </div>
                 <div id="pr_item_gallery" class="product_gallery_item slick_slider" data-slides-to-show="4" data-slides-to-scroll="1" data-infinite="false">
                     @foreach ($arrSubImage as $image)
                     <div class="item">
                         <a href="#" class="product_gallery_item active" data-image="{{$image->getUrl()}}" data-zoom-image="{{$image->getUrl()}}">
-                            <img src="{{$image->getUrl('thumb')}}" alt="{{$product->name}}" 
-                            onerror="this.onerror=null;this.src='{{ asset('assets/images/image-not-available.jpg') }}';"/>
+                            <img src="{{$image->getUrl('thumb')}}" alt="{{$product->name}}" onerror="this.onerror=null;this.src='{{ asset('assets/images/image-not-available.jpg') }}';" />
                         </a>
                     </div>
                     @endforeach
@@ -52,7 +50,7 @@ $arrSubImage = $product->getMedia('images');
                         <span class="switch_lable">Màu sắc</span>
                         <div class="product_color_switch">
                             <span class="active" data-color="#87554B"></span>
-                            <span data-color="#333333"></span>
+                            <span data-color="#333333333"></span>
                             <span data-color="#DA323F"></span>
                         </div>
                     </div> --}}
