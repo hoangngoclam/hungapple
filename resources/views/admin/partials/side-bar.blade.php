@@ -48,49 +48,6 @@
                 </li>
 
                 <li class="sidebar-item selected">
-                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)"
-                        aria-expanded="false">
-                        <i class="mdi mdi-cellphone"></i>
-                        <span class="hide-menu sidebar-item-text">Quản lý dịch vụ</span>
-                    </a>
-                    <ul aria-expanded="false" class="collapse first-level">
-                        <li class="sidebar-item active">
-                            <a href="{{ route('admin.service') }}" class="sidebar-link">
-                                <i class="mdi mdi-format-list-bulleted"></i>
-                                <span class="hide-menu">Danh sách dịch vụ</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="{{ route('admin.addServiceGet') }}" class="sidebar-link">
-                                <i class="mdi mdi-plus-circle"></i>
-                                <span class="hide-menu">Thêm dịch vụ</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="sidebar-item selected">
-                    <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
-                        <i class="mdi mdi-view-dashboard"></i>
-                        <span class="hide-menu sidebar-item-text">Danh mục dịch vụ</span>
-                    </a>
-                    <ul aria-expanded="false" class="collapse first-level">
-                        <li class="sidebar-item active">
-                            <a href="{{route('admin.serviceCategory')}}" class="sidebar-link">
-                                <i class="mdi mdi-format-list-bulleted"></i>
-                                <span class="hide-menu">Danh sách danh mục</span>
-                            </a>
-                        </li>
-                        <li class="sidebar-item">
-                            <a href="{{ route('admin.addServiceCategoryGet') }}" class="sidebar-link">
-                                <i class="mdi mdi-plus-circle"></i>
-                                <span class="hide-menu">Thêm danh mục</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-
-                <li class="sidebar-item selected">
                     <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false">
                         <i class="mdi mdi-account"></i>
                         <span class="hide-menu sidebar-item-text">Quản lý người dùng</span>

@@ -72,11 +72,12 @@ class BaseController extends Controller
             return $item;
         }, $productCategoryLevel1);
 
-        $shopPhoneNumber = "093-318-7879";
-        $shopEmail = "hungapple@gmail.com";
-        $shopAddress = "176 Phan Đình Phùng - Phường 2 - TP. Đà Lạt - Lâm Đồng";
+        $shopPhoneNumber = "092-968-2986";
+        $shopEmail = "tstorecontact@gmail.com";
+        $shopAddress = "46 Đường Thông Thiên Học, Phường 2, TP.Đà Lạt, Lâm Đồng";
+        $googleMapURL = "https://goo.gl/maps/cL4kAimnfaGRno3MA";
         $listAllCategory = array_merge($productCategorys, $serviceCategorys);
         // Sharing is caring
-        View::share(compact('shopPhoneNumber', 'shopEmail', 'shopAddress', 'brands', 'categories', 'allCategoriesProcessed', 'accCategories', 'serviceCategorys', 'productCategorys','listAllCategory'));
+        View::share(compact('googleMapURL', 'shopPhoneNumber', 'shopEmail', 'shopAddress', 'brands', 'categories', 'allCategoriesProcessed', 'accCategories', 'serviceCategorys', 'productCategorys', 'listAllCategory'));
     }
 }

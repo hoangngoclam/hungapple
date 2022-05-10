@@ -86,56 +86,6 @@
         </div>
         <hr />
     @endforeach
-    
-    @foreach ($arrayServiceCategory as $category)
-        <div class="section small_pt pb_70">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-6">
-                        <div class="heading_s1 text-center">
-                            <h2>{{$category["name"]}}</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="tab-style1">
-                            <ul class="nav nav-tabs justify-content-center" role="tablist">
-                                @foreach ($category["childrenCategory"] as $key => $childCategory)
-                                <li class="nav-item">
-                                    <a  class="nav-link @if(reset($category["childrenCategory"])["name"] == $childCategory["name"])active @endif" id="category-{{$childCategory["id"]}}" 
-                                        data-toggle="tab" href="#Components-services-{{$childCategory["id"]}}" role="tab" aria-controls="Components-services-tab{{$childCategory["id"]}}" 
-                                        aria-selected="true">
-                                        {{$childCategory["name"]}}
-                                    </a>
-                                </li>
-                                @endforeach
-                            </ul>
-                        </div>
-                        <div class="tab-content">
-                            @foreach ($category["childrenCategory"] as $key => $childCategory)
-                            <div class="tab-pane fade @if(reset($category["childrenCategory"])["name"] == $childCategory["name"])show active @endif" 
-                                id="Components-services-{{$childCategory["id"]}}" role="tabpanel" aria-labelledby="Components-services-tab{{$childCategory["id"]}}">
-                                <div class="row shop_container">
-                                    @foreach ($childCategory["services"] as $service)
-                                    <div class="col-lg-3 col-md-4 col-6">
-                                        @include('client.partials.service-card', ['service' => $service])
-                                    </div>
-                                    @endforeach
-
-                                </div>
-                            </div>
-                            @endforeach
-                            <div class="text-center">
-                                <a type="button" href="{{ route('client.serviceShop').'?cat1='.$category["id"] }}" class="btn btn-sm btn-fill-out">Xem thêm</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <hr />
-    @endforeach
 
 
     

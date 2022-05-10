@@ -122,7 +122,7 @@ $fee_shipping = 25000;
                                 <div class="custome-radio">
                                     <input class="form-check-input" type="radio" name="payment_option" id="exampleRadios1" value="{{config('constants.payment_method.TRANSFER')}}" >
                                     <label class="form-check-label" for="exampleRadios1">Chuyển khoản trực tiếp</label>
-                                    <p data-method="{{config('constants.payment_method.TRANSFER')}}" class="payment-text">Chúng tôi sẽ liên hệ với quý khách và thanh toán bằng cách chuyển khoản qua STK: 123456789, Tên tài khoản: Hưng Apple</p>
+                                    <p data-method="{{config('constants.payment_method.TRANSFER')}}" class="payment-text">Chúng tôi sẽ liên hệ với quý khách và thanh toán bằng cách chuyển khoản qua STK: 123456789, Tên tài khoản: TStore</p>
                                 </div>
                             </div>
                         </div>

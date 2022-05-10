@@ -44,7 +44,7 @@
             <div class="auth-box">
                 <div>
                     <div class="logo">
-                        <span class="db"> <img src="{{url('/assets/images/logo/logo-chuan.png')}}" alt="login" /></span>
+                        <span class="db"> <img src="{{url('/assets/images/logo/logo-chuan.png')}}" width="150px" alt="login" /></span>
                     </div>
                     <!-- Form -->
                     <div class="row">

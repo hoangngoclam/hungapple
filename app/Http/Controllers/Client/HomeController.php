@@ -49,12 +49,6 @@ class HomeController extends BaseController
         return view(
             'client.pages.home',
             [
-                // 'arrayCategoryId' => $arrayCategoryId,
-                // 'arrayProducts' => $arrayProducts,
-                // 'arrayBrandId' => $arrayBrandId,
-                // 'arrayProductsLK' => $arrayProductsLK,
-                // 'arrayCategoryIdLv2Lk' => $arrayCategoryIdLv2Lk,
-                // 'arrayProductsPK' => $arrayProductsPK,
                 'arrayCategory' => $categorys,
                 'arrayServiceCategory' => $serviceCategorys,
                 'sliders' => $sliders,

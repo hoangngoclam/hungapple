@@ -4,13 +4,13 @@
 <head>
     @if (Route::is('client.home'))
     <!-- SITE TITLE -->
-    <title>Hưng Apple | Linh kiện - Phụ kiện - Điện thoại -Sửa chưa & Bảo hành</title>
-    <meta name="title" content="Hưng apple | Điện thoại - Linh kiện - Phụ kiện - Sửa chữa và bảo hành điện thoại Đà Lạt">
-    <meta name="description" content="Hưng apple | Cung cấp các mặt hàng linh kiện, phụ kiện, điện thoại. Đi kèm với dịch vụ như sửa chữa, ép kính, thay thế linh kiện chính hãng chất lượng cao tại Đà Lạt">
+    <title>TStore | Linh kiện - Phụ kiện - Điện thoại -Sửa chưa & Bảo hành</title>
+    <meta name="title" content="TStore | Điện thoại - Linh kiện - Phụ kiện - Sửa chữa và bảo hành điện thoại Đà Lạt">
+    <meta name="description" content="TStore | Cung cấp các mặt hàng linh kiện, phụ kiện, điện thoại. Đi kèm với dịch vụ như sửa chữa, ép kính, thay thế linh kiện chính hãng chất lượng cao tại Đà Lạt">
     <meta name="keywords" content="Điện thoại, Linh kiện, Phụ kiện giá rẻ, Sửa chữa và bảo hành điện thoại">
 
-    <meta property="og:title" content="Hưng apple | Điện thoại - Linh kiện - Phụ kiện - Sửa chữa và bảo hành điện thoại">
-    <meta property="og:description" content="Hưng apple | Cung cấp các mặt hàng linh kiện, phụ kiện, điện thoại. Đi kèm với dịch vụ như sửa chữa, ép kính, thay thế linh kiện chính hãng chất lượng cao tại Đà Lạt">
+    <meta property="og:title" content="TStore | Điện thoại - Linh kiện - Phụ kiện - Sửa chữa và bảo hành điện thoại">
+    <meta property="og:description" content="TStore | Cung cấp các mặt hàng linh kiện, phụ kiện, điện thoại. Đi kèm với dịch vụ như sửa chữa, ép kính, thay thế linh kiện chính hãng chất lượng cao tại Đà Lạt">
     <meta property="og:url" content="https://tstore.com.vn">
     <meta property="og:image" content="">
     @elseif(Route::is('client.detail'))
@@ -27,7 +27,7 @@
     <meta property="og:url" content="https://tstore.com.vn">
     <meta property="og:image" content="{{ asset($arrSubImage[0]) }}">
     @else
-    <title>Hưng Apple | Linh kiện - Phụ kiện - Điện thoại -Sửa chưa & Bảo hành</title>
+    <title>TStore | Linh kiện - Phụ kiện - Điện thoại -Sửa chưa & Bảo hành</title>
     @endif
     <!-- Meta -->
     <meta charset="utf-8">
@@ -36,15 +36,15 @@
     <meta name="csrf-token" content="3LReMnrvkZ44qMz6Lkjf2wz6ERrDSIqpTSDhr3cs">
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="copyright" content="Hưng apple">
-    <meta name="author" content="Hưng apple">
+    <meta name="copyright" content="TStore">
+    <meta name="author" content="TStore">
     <meta http-equiv="audience" content="General">
     <meta name="resource-type" content="Document">
     <meta name="distribution" content="Global">
     <meta content="INDEX,FOLLOW" name="robots">
     <meta name="revisit-after" content="1 days">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="GENERATOR" content="Hưng apple">
+    <meta name="GENERATOR" content="TStore">
     <meta property="og:site_name" content="tstore.com.vn">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="vi_VN">
@@ -146,7 +146,7 @@
                         <div class="header_topbar_info">
                             <div class="header_offer">
                                 <i class="ti-location-pin"></i>
-                                <a href="https://goo.gl/maps/wBFC3gWGUtQzx5Fd7">{{$shopAddress}}</a>
+                                <a href="{{$googleMapURL}}">{{$shopAddress}}</a>
                             </div>
                         </div>
                     </div>
@@ -306,31 +306,6 @@
                                             </ul>
                                         </div>
                                     </li>
-                                    <li class="dropdown dropdown-mega-menu">
-                                        <a class="dropdown-toggle nav-link" href="{{ route('client.serviceShop') }}" data-toggle="dropdown">
-                                            Sửa chữa
-                                        </a>
-                                        <div class="dropdown-menu">
-                                            <ul class="mega-menu d-lg-flex">
-                                                @if (isset($serviceCategorys) && $serviceCategorys)
-                                                <li class="mega-menu-col col-lg-4">
-                                                    <ul>
-                                                        <li>
-                                                            <a class="dropdown-item nav-link nav_item" href="{{ route('client.serviceShop') }}">Tất cả</a>
-                                                        </li>
-                                                        <!-- <li class="dropdown-header" style="color: #ffd400;">Iphone</li> -->
-                                                        @foreach ($serviceCategorys as $serviceCategory)
-                                                        <li><a class="dropdown-item nav-link nav_item" href="{{ route('client.serviceShop') . '?cat1=' . $serviceCategory["id"] }}">{{ $serviceCategory["name"] }}</a>
-                                                        </li>
-                                                        @endforeach
-
-                                                    </ul>
-                                                </li>
-                                                @endif
-
-                                            </ul>
-                                        </div>
-                                    </li>
 
                                     <li>
                                         <a class="nav-link nav_item" href="{{ route('client.contact') }}">
@@ -415,7 +390,7 @@
                             <ul class="contact_info contact_info_light">
                                 <li>
                                     <i class="ti-location-pin"></i>
-                                    <a href="https://goo.gl/maps/wBFC3gWGUtQzx5Fd7">{{$shopAddress}}</a>
+                                    <a href="{{$googleMapURL}}">{{$shopAddress}}</a>
                                 </li>
                                 <li>
                                     <i class="ti-email"></i>
@@ -470,7 +445,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <p class="mb-md-0 text-center text-md-left">© 2021 HungApple Đăng ký bản quyền </p>
+                        <p class="mb-md-0 text-center text-md-left">© 2022 TStore Đăng ký bản quyền </p>
                     </div>
                     <div class="col-md-6">
                         <ul class="footer_payment text-center text-md-right">

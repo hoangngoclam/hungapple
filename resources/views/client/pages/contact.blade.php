@@ -14,7 +14,7 @@
                         </div>
                         <div class="contact_text">
                             <span>Address</span>
-                            <a href="https://goo.gl/maps/wBFC3gWGUtQzx5Fd7">{{$shopAddress}}</a>
+                            <a href="{{$googleMapURL}}">{{$shopAddress}}</a>
                         </div>
                     </div>
                 </div>
